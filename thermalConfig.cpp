@@ -1141,6 +1141,75 @@ namespace implementation {
 		},
 	};
 
+	std::vector<std::string> cpu_sensors_lemansAU =
+	{
+		"cpu-0-0-0",
+		"cpu-0-1-0",
+		"cpu-0-2-0",
+		"cpu-0-3-0",
+		"cpu-1-0-0",
+		"cpu-1-1-0",
+		"cpu-1-2-0",
+		"cpu-1-3-0",
+	};
+
+	std::vector<struct target_therm_cfg>  lemansAU_common = {
+		{
+			TemperatureType::CPU,
+			cpu_sensors_lemansAU,
+			"",
+			105000,
+			118000,
+			105000,
+			true,
+		},
+		{
+			TemperatureType::GPU,
+			{ "gpuss-0" },
+			"GPU0",
+			105000,
+			118000,
+			105000,
+			true,
+		},
+		{
+			TemperatureType::GPU,
+			{ "gpuss-1" },
+			"GPU1",
+			105000,
+			118000,
+			105000,
+			true,
+		},
+		{
+			TemperatureType::GPU,
+			{ "gpuss-2" },
+			"GPU2",
+			105000,
+			118000,
+			105000,
+			true,
+		},
+		{
+			TemperatureType::NPU,
+			{ "nsp-0-0-0" },
+			"nsp0",
+			105000,
+			118000,
+			105000,
+			true,
+		},
+		{
+			TemperatureType::NPU,
+			{ "nsp-1-0-0" },
+			"nsp1",
+			105000,
+			118000,
+			105000,
+			true,
+		},
+	};
+
 	struct target_therm_cfg bat_conf = {
 		TemperatureType::BATTERY,
 		{ "battery" },
@@ -1230,6 +1299,7 @@ namespace implementation {
 		{486, sensor_cfg_monaco}, // monaco
 		{517, sensor_cfg_monaco}, // monaco
 		{608, crow_common}, //crow
+		{532, lemansAU_common}, //Lemans auto
 	};
 
 	const std::unordered_map<int, std::vector<struct target_therm_cfg>>
