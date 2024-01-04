@@ -1299,6 +1299,7 @@ namespace implementation {
 		{486, sensor_cfg_monaco}, // monaco
 		{517, sensor_cfg_monaco}, // monaco
 		{608, crow_common}, //crow
+		{644, crow_common}, //crow 4G
 		{532, lemansAU_common}, //Lemans auto
 	};
 
@@ -1327,6 +1328,7 @@ namespace implementation {
 		{603, kalama_specific}, //Kalama_qcs
 		{604, kalama_specific}, //Kalama_qcm
 		{608, crow_specific}, //crow
+		{644, crow_specific}, //crow
 	};
 
 	std::vector<struct target_therm_cfg> add_target_config(
