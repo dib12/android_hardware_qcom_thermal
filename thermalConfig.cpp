@@ -48,14 +48,14 @@ namespace implementation {
 
 	std::vector<std::string> cpu_sensors_bengal =
 	{
-		"cpuss-2-usr",
-		"cpuss-2-usr",
-		"cpuss-2-usr",
-		"cpuss-2-usr",
-		"cpu-1-0-usr",
-		"cpu-1-1-usr",
-		"cpu-1-2-usr",
-		"cpu-1-3-usr",
+		"cpuss-0",
+		"cpuss-1",
+		"cpuss-2",
+		"cpuss-2",
+		"cpu-1-0",
+		"cpu-1-1",
+		"cpu-1-2",
+		"cpu-1-3",
 	};
 
 	std::vector<struct target_therm_cfg> sensor_cfg_bengal =
@@ -71,7 +71,7 @@ namespace implementation {
 		},
 		{
 			TemperatureType::GPU,
-			{ "gpu-usr" },
+			{ "gpu" },
 			"GPU",
 			95000,
 			115000,
@@ -80,21 +80,12 @@ namespace implementation {
 		},
 		{
 			TemperatureType::SKIN,
-			{ "xo-therm-usr" },
+			{ "xo-therm" },
 			"skin",
 			40000,
 			95000,
 			40000,
 			true,
-		},
-		{
-			TemperatureType::BCL_VOLTAGE,
-			{ "pmi632-vbat-lvl0" },
-			"vbat",
-			3000,
-			2800,
-			3000,
-			false,
 		},
 		{
 			TemperatureType::BCL_CURRENT,
@@ -107,11 +98,11 @@ namespace implementation {
 		},
 		{
 			TemperatureType::BCL_PERCENTAGE,
-			{ "soc" },
-			"soc",
-			10,
-			2,
-			10,
+			{ "socd" },
+			"socd",
+			90,
+			99,
+			90,
 			false,
 		},
 	};
